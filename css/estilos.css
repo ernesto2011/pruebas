@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url(Roboto/Roboto-Regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+header{
+    background: #4357ad;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+    header nav{
+    font-family: "Roboto";
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    }
+    header nav div a{
+    font-family:"Roboto";
+    color: #ffffff;
+    padding: 0 1em;
+    text-decoration: none;
+    background:  #0b515b;
+    }
+    
+    header nav div h4{
+    color: #ffffff;
+    }
+body{
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    background: #f2f2f2;
+}
+
+a{
+    text-decoration: none;
+}
+.contenedor{
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+h2{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Roboto",sans-serif;
+    font-weight: bold;
+    color: #555;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.barra__buscador{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.btn__grupo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.formulario{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+form .input__text{
+    width: 100%;
+    border: 1px solid #1b743c;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #000000;
+    display: block;
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    max-width: 40%;
+    margin-right: 10px;
+    outline: medium none;
+}
+
+.contenedor form .form-group.radio {
+    width: 100%;
+    display: block;
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 10px 10px 20px 10px;
+    max-width: 47%;
+    margin-right: 10px;
+    outline: medium none;
+    display: flex;
+    justify-content: start;
+    margin: auto;
+}
+
+.contenedor form .form-group.radio label {
+    display: inline-block;
+    cursor: pointer;
+    color: #1b743c;
+    position: relative;
+    padding: 5px 15px 5px 51px;
+    font-size: 1em;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+.contenedor form .form-group.radio label:hover {
+    background: #bbdefb;
+}
+
+.contenedor form .form-group.radio label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: 15px;
+    border-radius: 50%;
+    background: none;
+    border: 2px solid #1b743c;
+}
+
+.contenedor form .form-group.radio input[type="radio"] {
+    display: none;
+}
+
+.contenedor form .form-group.radio input[type="radio"]:checked + label:before {
+    display: none;
+  }
+  
+.contenedor form .form-group.radio input[type="radio"]:checked + label {
+    padding: 5px 15px;
+    background: #1b743c;
+    border-radius: 2px;
+    color: #f2f2f2;
+}
+
+form .input__text:focus{
+    border: 1px solid #1b743c;
+}
+form .form-group{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+form .form-group .input__text{
+    max-width: 45% !important;
+}
+
+
+form .btn{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #fff;
+    display: block;
+    font-family: "Roboto";
+    font-size: 1em;
+    background: rgb(3, 113, 163);
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.btn__nuevo{
+    float: right;
+    background: #1b743c !important;
+}
+
+.btn__group{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn__primary{
+    background: rgb(3, 113, 163);
+}
+.btn__danger{
+    background: #8a0505 !important;
+}
+
+
+/* table */
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table .head{
+    background: rgb(3, 113, 163);
+}
+table .head td{
+    color: #fff;
+    font-family: "Roboto",sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+table tr td{
+    border:1px solid #ccc;
+    padding: 7px;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn__update{
+    display: block;
+    font-size: 14px;
+    background: #1b743c;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.btn__delete{
+    display: block;
+    font-size: 14px;
+    background: #8a0505;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+/*  */
