@@ -17,7 +17,7 @@ para ejecutar las pruebas solo debes
    solo se pueden eliminar las ventas y se deben ingresar desde la base de datos,
 * para agregar un nuevo usuario o producto solo debe ingresar a localhost/example/form_prod.html o  localhost/example/form.html
 * solo las ventas se pueden eliminar ya que si se trata de eliminar un usuario o un producto interferira las llaves foraneas 
-para ver mas detalles solo debes abrir el archivo con culaquier editor de texto y veras la parte documentada.
+
 ## Construido con 🛠️
 
 _lenguaje de programación_
