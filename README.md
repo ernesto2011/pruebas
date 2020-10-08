@@ -12,8 +12,8 @@
       
 ## pruebas ⚙️
 para ejecutar las pruebas solo debes 
-* entrar al link http://localhost/example
-   -esto lo dirigira a la pagina principal para visualizar datos de una venta encontrara otros datos como link para tablas de usuarios y productos
+* entrar al link http://localhost/example   o depende de como renombres a la carpeta
+   esto lo dirigira a la pagina principal para visualizar datos de una venta encontrara otros datos como link para tablas de usuarios y productos
    solo se pueden eliminar las ventas y se deben ingresar desde la base de datos,
 * para agregar un nuevo usuario o producto solo debe ingresar a localhost/example/form_prod.html o  localhost/example/form.html
 * solo las ventas se pueden eliminar ya que si se trata de eliminar un usuario o un producto interferira las llaves foraneas 
