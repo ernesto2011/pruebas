@@ -8,7 +8,7 @@
  
  ### Pre-requisitos 📋
  para ejecutar el programa debes tener:
- * istalado un servidor que ejecute codigo php como puede ser Xampp, wampp etc
+ * instalado un servidor que ejecute codigo php como puede ser Xampp, wampp etc
       
 ## pruebas ⚙️
 para ejecutar las pruebas solo debes 
@@ -23,9 +23,8 @@ para ver mas detalles solo debes abrir el archivo con culaquier editor de texto 
 _lenguaje de programación_
 
 * Php
-
-
-
+* html
+* CSS
 
 ## Autores ✒️
 Ernesto López
