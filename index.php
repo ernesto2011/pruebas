@@ -40,7 +40,7 @@
 				<td>fecha</td>
 				<td>hora</td>
 			
-				<td colspan="2">Acción</td>
+				<td>Acción</td>
             </tr>
             <?php foreach($resultado as $fila):?>
 				<tr>
@@ -86,8 +86,7 @@
                     </td>
 					<td><?php echo $fila['3']; ?></td>
 					<td><?php echo $fila['4']; ?></td>
-				
-					<td><a href="actualizar_registro.php?id=<?php echo $fila['id_vtas']; ?>"  class="btn__update" >Editar</a></td>
+			
 					<td><a href="delete_reg.php?id=<?php echo $fila['id_ventas']; ?>" class="btn__delete">Eliminar</a></td>
 				</tr>
 			<?php endforeach ?>

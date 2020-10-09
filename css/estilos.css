@@ -3,19 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-@font-face {
-	font-family: "Roboto";
-	src: url(Roboto/Roboto-Regular.ttf);
-	font-weight: normal;
-	font-style: normal;
-}
 header{
-    background: #4357ad;
-    position: fixed;
+    font-family:"Roboto";
+    background:  #0b515b;
     width: 100%;
-    top: 0;
-  }
+    }
     header nav{
     font-family: "Roboto";
     display: flex;

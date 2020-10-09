@@ -1,12 +1,18 @@
 <?php
 	include_once 'conex.php';
+	global $resultado;
 
-    $id = $_GET['id_user'];
+	if(isset($_GET['id_user'])){
+		$id = (int) $_GET['id_user'];
 
-    $sentencia = $con->prepare("SELECT * FROM users WHERE id_user= ?;");
-    $sentencia->execute([$id]);
-    $persona = $sentencia->fetch(PDO::FETCH_OBJ);
-
+		$sql = $con->prepare('SELECT * FROM users WHERE id_user=:id');
+		$sql->execute(array(
+			':id'=>$id
+		));
+		$resultado = $sql->fetch();
+	}else{
+		header('Location: index.php');
+	}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -18,26 +24,31 @@
 <body>
 	<div class="contenedor">
 		<h2>ACTUALIZACIÓN DE DATOS</h2>
-		<form action="" method="post">
+		<form action="load_db.php" method="post" name="formulario">
+
 			<div class="form-group">
-				<input type="hidden" name="id_user" value="<?php echo $persona->id_user; ?> " class="input__text" placeholder="Numero de lista" required>
+				<input type="hidden" name="id_alumno"  value="<?php if($resultado) echo $resultado['id_user']; ?>" class="input__text" required>
             </div>
+
 			<div class="form-group">
-				<input type="text" name="nombre" value="<?php echo $persona->nombre; ?>" class="input__text" placeholder="Nombre" required>
+				<input type="text" name="nombre" id="nombre" value="<?php if($resultado) echo $resultado['nombre']; ?>" class="input__text" required>
+            </div>
+
+            <div class="form-group">
+        	    <input type="text" name="app" id="app" value="<?php if($resultado) echo $resultado['app']; ?>" class="input__text" required>
+			</div>
+
+			<div class="form-group">
+                <input type="text" name="apm" id="apm" value="<?php if($resultado) echo $resultado['apm']; ?>" class="input__text" required>
+			</div>
+
+			<div class="form-group">
+				<input type="text" name="edad" id="fecha_n" value="<?php if($resultado) echo $resultado['edad']; ?>" class="input__text" required>
             </div>
             <div class="form-group">
-                <input type="text" name="app" value="<?php echo $persona->app; ?>" class="input__text" placeholder="Apellido paterno" required>  
+				<input type="text" name="direccion" id="direccion" value="<?php if($resultado) echo $resultado['direccion']; ?>" class="input__text" required>
 			</div>
-			<div class="form-group">
-                <input type="text" name="apm" value="<?php echo $persona->apm; ?>" class="input__text" placeholder="Apellido materno" required>  
-			</div>
-			<div class="form-group">
-				<input type="text" name="edad" value="<?php echo $persona->edad; ?>" class="input__text" required>
-			</div>
-			<div class="form-group">
-				<input type="text" name="direccion" value="<?php echo $persona->direccion; ?>" class="input__text" required>
-			</div>
-			
+
 			<div class="btn__group">
 				<a href="consulta_alumnos.php" class="btn btn__danger">Cancelar</a>
 				<input type="submit" name="guardar" value="Actualizar" class="btn btn__primary">

@@ -2,7 +2,7 @@
 
 	include_once 'conex.php';
 
-	$sql = $con->prepare('SELECT * FROM users');
+	$sql = $con->prepare('SELECT * FROM productos');
 	$sql->execute();
 	$resultado = $sql->fetchAll();
 ?>
@@ -19,10 +19,10 @@
       <nav>
             <div class="container">
 
-            <h4>Panel de administración de usuarios</h4>
+            <h4>Panel de administración de productos</h4>
             </div>
             <div>
-            <a href="add_user.php">Agregar Usuario</a>
+            <a href="form_prod.html">Agregar Producto</a>
             <a href="index.php">Regresar</a>
             </div>
       </nav>
@@ -32,24 +32,19 @@
 			<tr class="head">
 				<td>Id </td>
                 <td>Nombre</td>
-                <td>Apellido P</td>
-                <td>Apellido M</td>
-                <td>Edad</td>
-				<td>Dirección</td>
-				<td>Acción</td>
+                <td>No de serie</td>
+                <td>Descripcion</td>
+				
             </tr>
             <?php foreach($resultado as $fila):?>
 				<tr>
-					<td><?php echo $fila['id_user']; ?></td>
+					<td><?php echo $fila['id_productos']; ?></td>
 
                     <td><?php echo $fila['1']; ?></td>
                     <td><?php echo $fila['2']; ?></td>
 					<td><?php echo $fila['3']; ?></td>
-                    <td><?php echo $fila['4']; ?></td>
-                    <td><?php echo $fila['5']; ?></td>
+                    
 				
-					<td><a href="for_up.php?id_user=<?php echo $fila['id_user']; ?>"  class="btn__update" >Editar</a></td>
-					
 				</tr>
 			<?php endforeach ?>
 

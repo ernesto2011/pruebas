@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-10-2020 a las 00:59:32
+-- Tiempo de generación: 09-10-2020 a las 03:00:15
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -78,7 +78,8 @@ INSERT INTO `productos` (`id_productos`, `nombre`, `no_de_serie`, `descripcion`)
 (6, 'lapiz', 'b-1', 'lapiz no.2'),
 (7, 'taclado al 70%', 'asuz-112a', 'teclado mecanico con rgb'),
 (8, 'mouse', 'mo.4321', 'mouse alambrico entrada USB'),
-(9, 'tijeras', 'tj-23-gj', 'tijera para uso escolar');
+(9, 'tijeras', 'tj-23-gj', 'tijera para uso escolar'),
+(10, 'celular xiaomi', '123-33j', 'cuadruple camara, 6 gb de ram');
 
 -- --------------------------------------------------------
 
@@ -123,7 +124,11 @@ CREATE TABLE `ventas` (
 --
 
 INSERT INTO `ventas` (`id_ventas`, `user_id`, `producto_id`, `fecha`, `hora`) VALUES
-(1, 2, 6, '2020-10-07', '15:19:40');
+(1, 2, 6, '2020-10-07', '15:19:40'),
+(3, 1, 2, '2020-10-08', '18:58:55'),
+(4, 3, 6, '2020-10-08', '18:54:55'),
+(5, 3, 3, '2020-10-08', '19:00:12'),
+(6, 1, 4, '2020-10-08', '15:55:49');
 
 --
 -- Índices para tablas volcadas
@@ -169,7 +174,7 @@ ALTER TABLE `deudas`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_productos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_productos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
@@ -181,7 +186,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id_ventas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_ventas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas

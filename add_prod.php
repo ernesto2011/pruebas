@@ -16,6 +16,6 @@ $sql->execute();
 
 
 echo"<script> alert('El producto fue registrado correctamente');</script>";
-header('Location: form_prod.html');
+header('Location: productos.php');
 
 ?>
